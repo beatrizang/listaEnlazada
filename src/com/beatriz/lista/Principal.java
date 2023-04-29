@@ -7,9 +7,19 @@ public class Principal {
 		Tarea tarea3 = new Tarea("Aplicar sellador");
 		Tarea tarea4 = new Tarea("Pintar");
 		
-		System.out.println(tarea1.getDescripcion());
-		System.out.println(tarea2.getDescripcion());
-		System.out.println(tarea3.getDescripcion());
-		System.out.println(tarea4.getDescripcion());
+		Actividad pintar = new Actividad("Pintar Pared");
+		
+		pintar.agregarAlFinal(tarea1);
+		pintar.agregarAlFinal(tarea2);
+		pintar.agregarAlFinal(tarea3);
+		pintar.agregarAlFinal(tarea4);
+		
+		pintar.mostrarTareas();
+		
+		pintar.eliminarUltimaTarea();;
+		
+		System.out.println("Despues de eliminar tarea");
+		
+		pintar.mostrarTareas();
 	}
 }
